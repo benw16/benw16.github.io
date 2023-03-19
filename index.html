@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Weed Deals</title>
+</head>
+<body>
+    <h1 class="title">Dispensary Deals Tempe- <span id="current-date"></span></h1>
+    <div class="dispensaries"> 
+        <div class="dispensary">
+            <h2 class="dispensary-title"><i class="fas fa-cannabis"></i> NirvanaCenter</h2>
+            <div class="dispensary-deals" id="nirvana-deals"></div>
+        </div>
+        <div class="dispensary">
+            <h2 class="dispensary-title"><i class="fas fa-cannabis"></i> The Good</h2>
+            <div class="dispensary-deals" id="good-deals"></div>
+        </div>
+        <div class="dispensary">
+            <h2 class="dispensary-title"><i class="fas fa-cannabis"></i> Sol Flower - McClintock</h2>
+            <div class="dispensary-deals" id="sol-deals"></div>
+        </div>
+    </div>
+    
+    <script>
+        const currentDateElem = document.getElementById("current-date");
+        const currentDate = new Date().toLocaleDateString("en-US", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+    
+        currentDateElem.textContent = currentDate;
+      </script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
